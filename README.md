@@ -12,7 +12,7 @@ Given: A Python script that generates a dataset with categorical and continuous 
 ### Files
 
 1. dataset.csv: The original dataset provided (generated using unknown parameters).<br>
-2. Task2-Solution.py: Python script for generating new synthetic samples and validating them.<br>
+2. Task2-Solution.py and Task2-Solution.ipynb  for generating new synthetic samples and validating them.<br>
 3. new_dataset.csv: Output file containing the generated synthetic dataset.<br>
 4. comparison_plots.png: Side-by-side visualizations comparing original and generated data.<br>
 
@@ -20,13 +20,13 @@ Given: A Python script that generates a dataset with categorical and continuous 
 
 #### 1. Load and Clean the Original Dataset
 
-Load the original dataset dataset.csv, which contains synthetic data with categorical and continuous features.
+Load the original dataset `dataset.csv´, which contains synthetic data with categorical and continuous features.
 
 #### 2.Characterizing the Original Dataset
 
-To generate synthetic samples,first analyze the statistical properties of the original dataset:
+To generate synthetic samples,first analyze the statistical properties of the original dataset
 
-Category1: Calculate the normalized frequency of each category`. This helps to replicate the categorical balance in the new data.
+Category1: Calculate the normalized frequency of each category. This helps to replicate the categorical balance in the new data.
 
 Value1 and Value2: Estimate the mean and standard deviation of these continuous variables using a normal distribution fit . These parameters define how the continuous values are distributed in the original dataset.
 
@@ -42,7 +42,7 @@ Category1 using a multinomial distribution.
 
 Value1 and Value2 from fitted normal distributions with the estimated mean and standard deviation.
 
-The resulting dataset is saved as `new_dataset.csv` for further validation and visualization.
+The resulting dataset is saved as `new_dataset.csv´ for further validation and visualization.
 
 #### 4. Validation
 
@@ -61,9 +61,9 @@ p-values greater than 0.05 means there is no statistically significant differenc
 
 ### Results
 
-Chi-Square p-value (Category1): 0.8013
-KS-Test p-value (Value1): 0.9666
-KS-Test p-value (Value2): 0.8572
+Chi-Square p-value (Category1): 0.8013 <br>
+KS-Test p-value (Value1): 0.9666<br>
+KS-Test p-value (Value2): 0.8572<br>
 
 These high p-values shows that the synthetic dataset is statistically similar to the original, and it does not reject the null hypothesis of the distributions being equal.
 
